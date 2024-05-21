@@ -1,0 +1,54 @@
+.text-field:disabled {
+    -fx-opacity: 1;
+    opacity: 1;
+}
+
+.border{
+    border: 5px;
+    -fx-border: 5px;
+
+}
+
+.blue{
+    background-color: #014bae;
+    -fx-background-color: #014bae;
+
+}
+
+.color-blue{
+    color: #014bae;
+    -fx-color: #014bae;
+}
+
+.orange{
+    background-color: #FF9142;
+    -fx-background-color: #FF9142;
+
+}
+
+.color-orange{
+    color: #FF9142;
+    -fx-color: #FF9142;
+
+}
+
+.hover:hover{
+    background-color: #efefef;
+    -fx-background-color: #efefef;
+    
+}
+
+.color-white{
+    color: #efefef;
+    -fx-color: #efefef;
+}
+
+.red{
+    background-color: #ff4646;
+    -fx-background-color: #ff4646;
+}
+
+.green{
+    background-color: #53ff4a;
+    -fx-background-color: #53ff4a;
+}

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="734.0" prefWidth="1204.0" style="-fx-background-color: #004aad;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ThinkersUserManagement.TutorController">
+   <children>
+      <TableView fx:id="tvTutors" layoutX="15.0" layoutY="55.0" onMouseClicked="#handleMouseAction" prefHeight="307.0" prefWidth="1171.0" style="-fx-border-color: black;">
+        <columns>
+          <TableColumn fx:id="colID" editable="false" prefWidth="92.0" text="Tutor ID" />
+          <TableColumn fx:id="colFirstName" editable="false" prefWidth="118.3333740234375" sortable="false" text="FirstName" />
+            <TableColumn fx:id="colLastName" editable="false" prefWidth="125.6666259765625" sortable="false" text="LastName" />
+            <TableColumn fx:id="colSubject" editable="false" prefWidth="195.0" sortable="false" text="Subject" />
+            <TableColumn fx:id="colGender" editable="false" prefWidth="91.66668701171875" sortable="false" text="Gender" />
+            <TableColumn fx:id="colAddress" editable="false" prefWidth="191.33331298828125" sortable="false" text="Address" />
+            <TableColumn fx:id="colContactInformation" editable="false" prefWidth="143.33331298828125" sortable="false" text="Contact Information" />
+            <TableColumn fx:id="colEducationalQualification" editable="false" prefWidth="162.3333740234375" sortable="false" text="Educational Qualification" />
+            <TableColumn fx:id="colTeachingExperience" editable="false" prefWidth="131.333251953125" sortable="false" text="Teaching Experience" />
+            <TableColumn fx:id="colAvailability" editable="false" prefWidth="117.666748046875" text="Availability" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button fx:id="backButton" layoutX="813.0" layoutY="678.0" mnemonicParsing="false" onAction="#switchToPrompt" prefHeight="34.0" prefWidth="98.0" style="-fx-border-color: black; -fx-background-color: #ff914d;" text="Back">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="updateButton" layoutX="413.0" layoutY="678.0" mnemonicParsing="false" onAction="#updateRecord" prefHeight="34.0" prefWidth="118.0" style="-fx-border-color: black; -fx-background-color: #ff914d;" text="Update">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="tfID" layoutX="139.0" layoutY="435.0" prefHeight="30.0" prefWidth="42.0" promptText="ID" />
+      <TextField fx:id="tfFirstName" layoutX="139.0" layoutY="473.0" prefHeight="30.0" prefWidth="186.0" promptText="FirstName" />
+      <TextField fx:id="tfLastName" layoutX="139.0" layoutY="513.0" prefHeight="30.0" prefWidth="186.0" promptText="LastName" />
+      <Button fx:id="addButton" layoutX="290.0" layoutY="678.0" mnemonicParsing="false" onAction="#addAccount" prefHeight="34.0" prefWidth="117.0" style="-fx-border-color: black; -fx-background-color: #ff914d;" text="Add">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="warning" layoutX="501.0" layoutY="429.0" prefHeight="21.0" prefWidth="302.0" textFill="RED">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="479.0" layoutY="375.0" prefHeight="45.0" prefWidth="277.0" text="Tutor Management" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Text fill="WHITE" layoutX="108.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="53.0" layoutY="494.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FirstName:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="54.0" layoutY="534.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LastName:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="935.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="70.0" layoutY="572.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="65.0" layoutY="616.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="tfContactInformation" layoutX="555.0" layoutY="477.0" prefHeight="34.0" prefWidth="202.0" promptText="Email or CP Number" />
+      <TextField fx:id="tfEducationalQualification" layoutX="555.0" layoutY="517.0" prefHeight="34.0" prefWidth="202.0" promptText="Degree" />
+      <TextField fx:id="tfTeachingExperience" layoutX="555.0" layoutY="558.0" prefHeight="34.0" prefWidth="202.0" promptText="Years of Teaching" />
+      <Text fill="WHITE" layoutX="403.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Information:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="371.0" layoutY="538.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Educational Qualification:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="403.0" layoutY="580.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teaching Experience:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="461.0" layoutY="617.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Availability:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="cbAvailability" layoutX="555.0" layoutY="597.0" prefHeight="30.0" prefWidth="202.0" />
+      <ChoiceBox fx:id="cbGender" layoutX="137.0" layoutY="553.0" prefHeight="30.0" prefWidth="188.0" />
+      <TextField fx:id="tfAddress" layoutX="137.0" layoutY="596.0" prefHeight="30.0" prefWidth="189.0" promptText="Address" />
+      <ChoiceBox fx:id="cbSubject" disable="true" layoutX="572.0" layoutY="725.0" prefHeight="39.0" prefWidth="190.0" visible="false" />
+      <ImageView fitHeight="49.0" fitWidth="52.0" layoutX="25.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo-icon.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="resetbutton" layoutX="712.0" layoutY="678.0" mnemonicParsing="false" onAction="#reset" prefHeight="34.0" prefWidth="98.0" style="-fx-border-color: black; -fx-background-color: #ff914d;" text="Reset">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <CheckBox fx:id="subjReadingAndMath" layoutX="877.0" layoutY="495.0" mnemonicParsing="false" text="Reading and Math" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="subjScienceClass" layoutX="877.0" layoutY="523.0" mnemonicParsing="false" text="Science Class" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="subjAcademicAssistance" layoutX="877.0" layoutY="578.0" mnemonicParsing="false" text="Academic Assistance" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="subjEnglishConversationClass" layoutX="877.0" layoutY="547.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="235.0" text="English Conversation Class" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></CheckBox>
+      <Text fill="WHITE" layoutX="230.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search By:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="cbSearchBy" layoutX="297.0" layoutY="16.0" prefHeight="25.0" prefWidth="130.0" />
+      <TextField fx:id="tfSearchBox" layoutX="454.0" layoutY="13.0" prefHeight="30.0" prefWidth="374.0" promptText="Search" />
+      <Button fx:id="btnSearch" layoutX="852.0" layoutY="13.0" mnemonicParsing="false" onAction="#searchTutors" prefHeight="32.0" prefWidth="112.0" text="Search" />
+   </children>
+</AnchorPane>

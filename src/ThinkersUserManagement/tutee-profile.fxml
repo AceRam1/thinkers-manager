@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0" prefWidth="812.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ThinkersUserManagement.TuteeProfileController">
+   <children>
+      <Pane layoutX="14.0" prefHeight="200.0" prefWidth="200.0" styleClass="blue" stylesheets="@styles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="233.0" fitWidth="223.0" layoutX="34.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@username.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lbName" layoutX="293.0" layoutY="61.0" prefHeight="46.0" prefWidth="380.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font></Label>
+            <Text fill="WHITE" layoutX="293.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" wrappingWidth="81.33673095703125">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="293.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nickname:" wrappingWidth="90.936767578125">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Label fx:id="lbNickname" layoutX="398.0" layoutY="111.0" prefHeight="46.0" prefWidth="282.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font></Label>
+            <TextField fx:id="tfId" disable="true" layoutX="81.0" layoutY="301.0" prefHeight="39.0" prefWidth="70.0" styleClass="text-field" stylesheets="@styles.css">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></TextField>
+            <Text fill="WHITE" layoutX="42.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:" wrappingWidth="38.136749267578125">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="42.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age:" wrappingWidth="70.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Label fx:id="lbAge" layoutX="113.0" layoutY="383.0" prefHeight="39.0" prefWidth="261.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font></Label>
+            <Text fill="WHITE" layoutX="42.0" layoutY="452.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender:" wrappingWidth="70.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Label fx:id="lbGender" layoutX="113.0" layoutY="428.0" prefHeight="39.0" prefWidth="261.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font></Label>
+            <Text fill="WHITE" layoutX="293.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject:" wrappingWidth="70.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Label fx:id="lbSubject" layoutX="398.0" layoutY="211.0" prefHeight="39.0" prefWidth="261.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Text fill="WHITE" layoutX="438.0" layoutY="399.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Info:" wrappingWidth="70.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Label fx:id="lbContact" layoutX="509.0" layoutY="385.0" prefHeight="39.0" prefWidth="261.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font></Label>
+            <Text fill="WHITE" layoutX="438.0" layoutY="457.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" wrappingWidth="70.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Label fx:id="lbAddress" layoutX="509.0" layoutY="433.0" prefHeight="39.0" prefWidth="261.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font></Label>
+            <TextField fx:id="tfTimeSlot" disable="true" layoutX="399.0" layoutY="160.0" prefHeight="39.0" prefWidth="121.0" styleClass="text-field" stylesheets="@styles.css">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></TextField>
+            <Text fill="WHITE" layoutX="293.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Slot:" wrappingWidth="105.99999999999989">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnAddStudent" layoutX="214.0" layoutY="529.0" mnemonicParsing="false" onAction="#addStudent" prefHeight="46.0" prefWidth="179.0" styleClass="green" text="Add Student">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnBack" layoutX="406.0" layoutY="529.0" mnemonicParsing="false" onAction="#switchToAssign2" prefHeight="46.0" prefWidth="179.0" styleClass="red" text="Back" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

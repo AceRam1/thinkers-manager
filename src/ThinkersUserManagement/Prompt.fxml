@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="321.0" prefWidth="332.0" style="-fx-background-color: #004aad;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ThinkersUserManagement.PromptController">
+   <children>
+      <Text fill="WHITE" layoutX="36.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thinkers Manager" textAlignment="CENTER" wrappingWidth="250.5234375">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="exit" layoutX="281.0" layoutY="279.0" mnemonicParsing="false" onAction="#exitApplication" style="-fx-background-color: #ff914d; -fx-border-color: gray;" text="Exit" textFill="WHITE" />
+      <Button fx:id="back" layoutX="233.0" layoutY="279.0" mnemonicParsing="false" onAction="#switchToLogin" style="-fx-background-color: #ff914d; -fx-border-color: gray;" text="Back" textFill="WHITE" />
+      <Button fx:id="tutor" layoutX="101.0" layoutY="74.0" mnemonicParsing="false" onAction="#switchToTutor" prefHeight="42.0" prefWidth="124.0" style="-fx-background-color: #ff914d; -fx-border-color: gray;" text="Manage Tutors" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="tutee" layoutX="101.0" layoutY="122.0" mnemonicParsing="false" onAction="#switchToTutee" prefHeight="42.0" prefWidth="124.0" style="-fx-background-color: #ff914d; -fx-border-color: gray;" text="Manage Tutees" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="schedule" layoutX="101.0" layoutY="171.0" mnemonicParsing="false" onAction="#switchToSched" prefHeight="42.0" prefWidth="124.0" style="-fx-background-color: #ff914d; -fx-border-color: gray;" text="Manage Schedules" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="payment" layoutX="101.0" layoutY="219.0" mnemonicParsing="false" onAction="#switchToPayment" prefHeight="42.0" prefWidth="124.0" style="-fx-background-color: #ff914d; -fx-border-color: gray;" text="Manage Payments" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
